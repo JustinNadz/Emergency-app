@@ -6,9 +6,10 @@ export const APP_CONFIG = {
 } as const;
 
 // Supabase Configuration - Direct connection (no backend needed)
+// Use EXPO_PUBLIC_ prefix for Expo environment variables
 export const SUPABASE_CONFIG = {
-    url: 'https://zplufqaruudndefumefj.supabase.co',
-    anonKey: 'sb_publishable_eulHy2sGKNs-TvSlDyHvtA_1CfsX1Vn',
+    url: process.env.EXPO_PUBLIC_SUPABASE_URL || '',
+    anonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '',
 } as const;
 
 // API Configuration (for offline queue retries)
