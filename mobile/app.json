@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Emergency Responder",
+    "slug": "emergency-responder-ph",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#DC2626"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.emergencyresponder.ph",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs your location to connect you with nearby emergency responders.",
+        "NSLocationAlwaysUsageDescription": "This app needs your location to provide emergency services.",
+        "NSCameraUsageDescription": "This app needs camera access for emergency documentation."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#DC2626"
+      },
+      "package": "com.emergencyresponder.ph",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "SEND_SMS",
+        "CALL_PHONE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "This app needs your location to connect you with nearby emergency responders."
+        }
+      ]
+    ]
+  }
+}
