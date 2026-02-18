@@ -1,6 +1,6 @@
 // Geoapify Map Configuration
 
-export const GEOAPIFY_API_KEY = '01e9f3db00934802b98373d6fef1b9b5';
+export const GEOAPIFY_API_KEY = process.env.EXPO_PUBLIC_GEOAPIFY_API_KEY || '';
 
 // Map tile URLs
 export const MAP_TILES = {
